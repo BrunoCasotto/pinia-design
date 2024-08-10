@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&family=Source+Sans+3&display=swap');
+
+:root {
+  --font-family: 'Behind Content', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+
+  //colors
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-action: #007bff;
+
+  --color-warning: #f47607;
+  --color-success: #f47607;
+  --color-error: #f47607;
+
+  --color-neutral-color-low: #fff;
+  --color-neutral-mid: #333;
+  --color-neutral-high: #000;
+
+  --color-surface-default: #fff;
+  --color-surface-contrast: #000;
+
+  --color-border-default: #000;
+  --color-border-contrast: #fff;
+
+  //sizes
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-xg: 32px;
+
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 6px;
+
+  --spacing-xs: 2px;
+  --spacing-sm: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 16px;
+  --spacing-xg: 32px;
+}
