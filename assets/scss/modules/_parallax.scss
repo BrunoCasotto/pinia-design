@@ -1,0 +1,8 @@
+@mixin parallax($url, $min-height: 500px) {
+  background-image: url($url);
+  min-height: $min-height;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
