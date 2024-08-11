@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="breakpoint">
     Hello world nuxt
   </div>
 </template>
@@ -8,6 +8,6 @@
 
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 
 </style>

@@ -7,5 +7,6 @@
 </template>
 
 <style lang="scss">
-@import './scss/base/reset.scss';
+@import './assets/scss/base/base.scss';
+@import './assets/scss/base/reset.scss';
 </style>
