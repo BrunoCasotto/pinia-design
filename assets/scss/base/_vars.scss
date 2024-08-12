@@ -54,14 +54,23 @@
   --spacing-xl: 32px;
   --spacing-xxl: 64px;
 
-  --breakpoint-xs: $breakpoint-xs;
-  --breakpoint-sm: $breakpoint-sm;
-  --breakpoint-md: $breakpoint-md;
-  --breakpoint-lg: $breakpoint-lg;
-  --breakpoint-xl: $breakpoint-xl;
+  --breakpoint-xs: #{$breakpoint-xs};
+  --breakpoint-sm: #{$breakpoint-sm};
+  --breakpoint-md: #{$breakpoint-md};
+  --breakpoint-lg: #{$breakpoint-lg};
+  --breakpoint-xl: #{$breakpoint-xl};
 }
 
 :root {
+  @media screen and (max-width: $breakpoint-lg) {
+    --font-size-xs: 11px;
+    --font-size-sm: 13px;
+    --font-size-md: 15px;
+    --font-size-lg: 18px;
+    --font-size-xl: 26px;
+    --font-size-xxl: 48px;
+  }
+
   @media screen and (max-width: $breakpoint-md) {
     --font-size-xs: 10px;
     --font-size-sm: 12px;

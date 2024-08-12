@@ -1,6 +1,6 @@
 <template>
   <div class="exibition-section">
-    <div class="exibition-section__information">
+    <div class="exibition-section__col">
       <DisplayTypoGraphy
         class="exibition-section__title"
         variant="h2"
@@ -22,12 +22,12 @@
 
     <div
       v-if="imageSrc"
-      class="exibition-section__information exibition-section__information--center"
+      class="exibition-section__col exibition-section__col--align-center"
     >
       <NuxtImg
         class="exibition-section__img"
         :src="imageSrc"
-        alt="imagem de um abacaxi"
+        :alt="imageAlt"
       />
     </div>
   </div>
@@ -36,6 +36,7 @@
 <script setup lang="ts">
   interface Props {
     imageSrc?: string
+    imageAlt?: string
     title: string
     description: string
   }
@@ -48,43 +49,49 @@
   @import '~/assets/scss/modules/breakpoints';
 
   .exibition-section {
-    padding: var(--spacing-xl);
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (max-width: $breakpoint-md) {
-      padding: var(--spacing-md);
-      width: 100%;
+    padding: var(--spacing-md);
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-md) {
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    &__information {
+    &__col {
       flex: 1;
-      min-width: 350px;
-      margin-right: var(--spacing-xl);
+      min-width: 300px;
+      &:not(:last-child) {
+        padding-bottom: var(--spacing-lg);
 
-      @media screen and (max-width: $breakpoint-md) {
-        margin-right: 0;
-        margin-bottom: var(--spacing-xxl);
-        min-width: 300px;
+        @media screen and (min-width: $breakpoint-md) {
+          padding-bottom: 0;
+          padding-right: var(--spacing-xl);
+        }
       }
 
-      &--center {
+      &--align-center {
         display: flex;
         justify-content: center;
+        align-items: center;
       }
+    }
+
+    &__description {
+      text-align: center;
     }
 
     &__title {
-      margin-bottom: var(--spacing-xl);
+      text-align: center;
+      padding-bottom: var(--spacing-lg);
+      @media screen and (min-width: $breakpoint-md) {
+        padding-bottom: var(--spacing-xl);
+      }
     }
 
     &__img {
-      flex: 1;
-      max-width: 300px;
-      @include floating();
-
-      @media screen and (max-width: $breakpoint-md) {
-        max-width: 200px;
-      }
+      width: 100%;
+      height: auto;
+      // @include floating(5s, 1s);
     }
   }
 </style>

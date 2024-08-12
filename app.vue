@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,6 +7,5 @@
 </template>
 
 <style lang="scss">
-@import './assets/scss/base/base.scss';
 @import './assets/scss/base/reset.scss';
 </style>

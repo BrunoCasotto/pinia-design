@@ -1,17 +1,18 @@
 <template>
   <div class="header">
-    <DisplayTypoGraphy
-      class="header__title"
-      variant="h1"
-      size="xxl"
-    >
-      Pinia
-    </DisplayTypoGraphy>
     <NuxtImg
       class="header__icon"
       src="/img/pinia.png"
       alt="imagem de um abacaxi"
     />
+
+    <DisplayTypoGraphy
+      class="header__title"
+      variant="h1"
+      size="xl"
+    >
+      Pinia
+    </DisplayTypoGraphy>
 
   </div>
 </template>
@@ -24,24 +25,16 @@
 
   .header {
     width: 100%;
-    min-height: 40px;
     display: flex;
-    justify-content: center;
-    align-items: end;
-    padding: var(--spacing-sm);
-
-    &__title {
-      margin-right: var(--spacing-lg);
-    }
+    padding: var(--spacing-md) var(--spacing-lg) 0 var(--spacing-lg);
+    align-items: baseline;
 
     &__icon {
       cursor: pointer;
       transform: rotate(15deg);
-      width: 50px;
-
-      @media screen and (max-width: $breakpoint-md) {
-        width: 30px;
-      }
+      width: 20px;
+      height: auto;
+      margin-right: var(--spacing-md);
     }
   }
 </style>
