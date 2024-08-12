@@ -9,7 +9,6 @@
     </DisplayTypoGraphy>
     <NuxtImg
       class="header__icon"
-      width="50"
       src="/img/pinia.png"
       alt="imagem de um abacaxi"
     />
@@ -21,6 +20,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~/assets/scss/modules/breakpoints';
+
   .header {
     width: 100%;
     min-height: 40px;
@@ -36,6 +37,11 @@
     &__icon {
       cursor: pointer;
       transform: rotate(15deg);
+      width: 50px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        width: 30px;
+      }
     }
   }
 </style>

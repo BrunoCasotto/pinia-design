@@ -45,16 +45,27 @@
 
 <style lang="scss">
   @import '~/assets/scss/modules/floating';
+  @import '~/assets/scss/modules/breakpoints';
 
   .exibition-section {
     padding: var(--spacing-xl);
     display: flex;
     flex-wrap: wrap;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: var(--spacing-md);
+      width: 100%;
+    }
 
     &__information {
       flex: 1;
-      margin-right: var(--spacing-xxl);
-      min-width: 300px;
+      min-width: 350px;
+      margin-right: var(--spacing-xl);
+
+      @media screen and (max-width: $breakpoint-md) {
+        margin-right: 0;
+        margin-bottom: var(--spacing-xxl);
+        min-width: 300px;
+      }
 
       &--center {
         display: flex;
@@ -70,6 +81,10 @@
       flex: 1;
       max-width: 300px;
       @include floating();
+
+      @media screen and (max-width: $breakpoint-md) {
+        max-width: 200px;
+      }
     }
   }
 </style>

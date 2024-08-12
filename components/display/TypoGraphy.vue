@@ -59,5 +59,11 @@ const weightClass = computed(() => props.weight ? `text--weight-${props.weight}`
   &--weight-bold {
     font-weight: 700;
   }
+
+  @media screen and (min-width: var(--breakpoint-md)) {
+    // &--weight-bold {
+      color: red;
+    // }
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout-default">
     <Header></Header>
     <slot />
     <Footer></Footer>
@@ -10,6 +10,8 @@
 
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .layout-default {
+    width: 100%;
+  }
 </style>

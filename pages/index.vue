@@ -54,7 +54,6 @@
 
 .section {
   min-height: 400px;
-  padding: var(--spacing-xl);
   display: flex;
   align-items: center;
   justify-content: center;

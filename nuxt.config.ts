@@ -5,7 +5,10 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+      meta:[
+        {name: 'viewport', content: 'initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover' }
+      ]
     },
   },
 
