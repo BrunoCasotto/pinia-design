@@ -1,5 +1,14 @@
 <template>
   <div class="breakpoint">
+    <section class="section">
+      <ExibiontSection
+        imageSrc="/img/product_example.png"
+        title="Seu novo suporte para monitor"
+        description="Um suporte de monitor modular é um acessório inovador projetado para maximizar a flexibilidade e personalização
+        do seu espaço de trabalho ou setup gamer."
+      />
+    </section>
+
     <section class="section section--desktop">
       <DisplayTypoGraphy
         class="section__title"
@@ -13,8 +22,7 @@
 
     <section class="section section--xl">
       <DisplayTypoGraphy variant="p" size="lg">
-        Um suporte de monitor modular é um acessório inovador projetado para maximizar a flexibilidade e personalização
-        do seu espaço de trabalho ou setup gamer. Ao contrário dos suportes de monitor tradicionais, este sistema
+        Ao contrário dos suportes de monitor tradicionais, este sistema
         modular permite que você adquira e combine diferentes módulos para criar uma configuração que atenda
         perfeitamente às suas necessidades e preferências.
       </DisplayTypoGraphy>
