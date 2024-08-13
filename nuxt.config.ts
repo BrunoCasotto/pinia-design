@@ -2,7 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-
+  runtimeConfig: {
+    public: {
+      cdn: {
+        auth: '&auth=MjQ5MTYzNTU4Mw__',
+        optmise: '/optimise?dppx=4',
+        product: 'https://pixboost.com/api/2/img/product'
+      }
+    }
+  },
   app: {
     head: {
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
@@ -18,6 +26,5 @@ export default defineNuxtConfig({
       ],
     },
   },
-
   modules: ["@nuxt/image"],
 });
