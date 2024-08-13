@@ -3,3 +3,11 @@ $breakpoint-sm: 480px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1440px;
+
+
+@mixin breakpoint() {
+  width: 100%;
+  max-width: var(--breakpoint-xl);
+  margin-left: auto;
+  margin-right: auto;
+}

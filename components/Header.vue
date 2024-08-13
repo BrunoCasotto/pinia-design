@@ -1,19 +1,20 @@
 <template>
   <div class="header">
-    <NuxtImg
-      class="header__icon"
-      src="/img/pinia.png"
-      alt="imagem de um abacaxi"
-    />
+    <div class="header__container">
+      <NuxtImg
+        class="header__icon"
+        src="/img/pinia.png"
+        alt="imagem de um abacaxi"
+      />
 
-    <DisplayTypoGraphy
-      class="header__title"
-      variant="h1"
-      size="xl"
-    >
-      Pinia
-    </DisplayTypoGraphy>
-
+      <DisplayTypoGraphy
+        class="header__title"
+        variant="h1"
+        size="xl"
+      >
+        Pinia
+      </DisplayTypoGraphy>
+    </div>
   </div>
 </template>
 
@@ -25,9 +26,13 @@
 
   .header {
     width: 100%;
-    display: flex;
     padding: var(--spacing-md) var(--spacing-lg) 0 var(--spacing-lg);
-    align-items: baseline;
+
+    &__container {
+      display: flex;
+      align-items: baseline;
+      @include breakpoint();
+    }
 
     &__icon {
       cursor: pointer;

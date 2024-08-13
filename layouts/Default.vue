@@ -2,7 +2,7 @@
   <div class="layout">
     <Header class="layout__header"></Header>
     <slot />
-    <Footer></Footer>
+    <Footer class="layout__footer"></Footer>
   </div>
 </template>
 
@@ -13,10 +13,18 @@
   width: 100%;
 
   &__header {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
 
     @media screen and (min-width: $breakpoint-md) {
-      margin-bottom: var(--spacing-xl);
+      margin-bottom: var(--spacing-xxl);
+    }
+  }
+
+  &__footer {
+    margin-top: var(--spacing-xl);
+
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: var(--spacing-xxl);
     }
   }
 }

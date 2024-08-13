@@ -49,23 +49,19 @@
   @import '~/assets/scss/modules/breakpoints';
 
   .exibition-section {
-    padding: var(--spacing-md);
     width: 100%;
-
-    @media screen and (min-width: $breakpoint-md) {
-      display: flex;
-      flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
 
     &__col {
       flex: 1;
       min-width: 300px;
       &:not(:last-child) {
-        padding-bottom: var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
 
         @media screen and (min-width: $breakpoint-md) {
-          padding-bottom: 0;
-          padding-right: var(--spacing-xl);
+          margin-bottom: 0;
+          margin-right: var(--spacing-xxl);
         }
       }
 
@@ -82,16 +78,17 @@
 
     &__title {
       text-align: center;
-      padding-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+
       @media screen and (min-width: $breakpoint-md) {
-        padding-bottom: var(--spacing-xl);
+        margin-bottom: var(--spacing-xxl);
       }
     }
 
     &__img {
       width: 100%;
       height: auto;
-      // @include floating(5s, 1s);
+      @include floating(5s, 1s);
     }
   }
 </style>
