@@ -1,10 +1,28 @@
 <template>
   <div class="layout">
-    <Header class="layout__header"></Header>
+    <Header class="layout__header" :fixed="fixedHeaders"></Header>
     <slot />
     <Footer class="layout__footer"></Footer>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const fixedHeaders = ref(false);
+
+const handleScroll = () => {
+  fixedHeaders.value = window.scrollY >= 10;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+</script>
 
 <style lang="scss">
 @import '~/assets/scss/modules/breakpoints';

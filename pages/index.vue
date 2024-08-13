@@ -1,6 +1,6 @@
 <template>
   <div class="breakpoint">
-    <section class="section section--break">
+    <section class="section section--lg section--break">
       <ExibiontSection
         :imageSrc="mainExibition.imageSrc"
         :imageAlt="mainExibition.imageAlt"
@@ -145,8 +145,8 @@
     margin-bottom: var(--spacing-xxl);
   }
 
-  &__title {
-    text-align: center;
+  &--lg {
+    min-height: 600px;
   }
 
   &--break {
@@ -166,6 +166,10 @@
   &--background-two {
     color: var(--color-font-contrast);
     @include parallax("/img/background/desktop_2.webp", 500px);
+  }
+
+  &__title {
+    text-align: center;
   }
 }
 </style>
