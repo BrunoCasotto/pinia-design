@@ -1,16 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
 
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
-      meta:[
-        {name: 'viewport', content: 'initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover' }
-      ]
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      title: 'Suporte de Monitor Modular com Módulo de Headset Integrado | Organização e Praticidade',
+      meta: [
+        {
+          name: "description",
+          content:
+            "Descubra o Suporte de Monitor Modular com Módulo de Headset Integrado, perfeito para setups de trabalho e gaming. Organize seu espaço e mantenha seu fone de ouvido ao alcance com design funcional e moderno. Personalize seu setup e melhore a produtividade com módulos versáteis e de alta qualidade.",
+        },
+      ],
     },
   },
 
-  modules: ["@nuxt/image"]
-})
+  modules: ["@nuxt/image"],
+});

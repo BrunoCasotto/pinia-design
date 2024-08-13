@@ -9,7 +9,7 @@
       />
     </section>
 
-    <section class="section section--desktop">
+    <section class="section section--background-one">
       <DisplayTypoGraphy
         class="section__title"
         variant="h2"
@@ -166,14 +166,14 @@
     }
   }
 
-  &--desktop {
+  &--background-one {
     color: var(--color-font-contrast);
-    @include parallax("/img/desktop.webp", 500px);
+    @include parallax("/img/background/desktop.webp", 500px);
   }
 
   &--desktop-2 {
     color: var(--color-font-contrast);
-    @include parallax("/img/desktop_2.webp", 500px);
+    @include parallax("/img/background/desktop_2.webp", 500px);
   }
 }
 </style>

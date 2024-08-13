@@ -3,7 +3,7 @@
     <div class="header__container">
       <NuxtImg
         class="header__icon"
-        src="/img/pinia.png"
+        src="/img/pinia_3d.png"
         alt="imagem de um abacaxi"
       />
 
@@ -26,6 +26,7 @@
 
   .header {
     width: 100%;
+    cursor: pointer;
     padding: var(--spacing-md) var(--spacing-lg) 0 var(--spacing-lg);
 
     &__container {
@@ -35,11 +36,16 @@
     }
 
     &__icon {
-      cursor: pointer;
-      transform: rotate(15deg);
-      width: 20px;
+      width: 30px;
       height: auto;
       margin-right: var(--spacing-md);
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      .header__icon {
+        transform: rotate(15deg);
+      }
     }
   }
 </style>
