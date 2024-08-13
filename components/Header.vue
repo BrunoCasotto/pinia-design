@@ -3,7 +3,7 @@
     <div class="header__container">
       <NuxtImg
         class="header__icon"
-        src="/img/pinia_3d.png"
+        :src="iconPath"
         alt="imagem de um abacaxi"
       />
 
@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+const iconPath = '/img/pinia/icon_sm.png'
 </script>
 
 <style lang="scss" scoped>
