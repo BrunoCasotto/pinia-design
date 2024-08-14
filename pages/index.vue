@@ -6,6 +6,7 @@
         :imageAlt="mainExibition.imageAlt"
         :title="mainExibition.title"
         :description="mainExibition.description"
+        :inverted="mainExibition.inverted"
       />
     </section>
 
@@ -26,6 +27,7 @@
         :imageAlt="gavetaExibition.imageAlt"
         :title="gavetaExibition.title"
         :description="gavetaExibition.description"
+        :inverted="gavetaExibition.inverted"
       />
     </section>
 
@@ -46,6 +48,7 @@
         :imageAlt="cellphoneExibition.imageAlt"
         :title="cellphoneExibition.title"
         :description="cellphoneExibition.description"
+        :inverted="cellphoneExibition.inverted"
       />
     </section>
 
@@ -66,6 +69,7 @@
         :imageAlt="headSetExibition.imageAlt"
         :title="headSetExibition.title"
         :description="headSetExibition.description"
+        :inverted="headSetExibition.inverted"
       />
     </section>
 
@@ -99,6 +103,7 @@
     description: string;
     imageSrc: string;
     imageAlt: string;
+    inverted: boolean;
   }
 
   const mainExibition: Exibition = {
@@ -106,28 +111,32 @@
     description: `Um suporte de monitor modular é um acessório inovador projetado para maximizar a flexibilidade e personalização
         do seu espaço de trabalho ou setup gamer.`,
     imageSrc: `${cdn.product}/sup_completo.png${cdn.optmise}${cdn.auth}`,
-    imageAlt: 'imagem de um suporte para monitor'
+    imageAlt: 'imagem de um suporte para monitor',
+    inverted: false
   }
 
   const gavetaExibition: Exibition = {
     title: 'Módulo de Gaveta',
     description: `um compartimento acoplável ao suporte de monitor, que oferece espaço extra para armazenar pequenos itens, como cabos, acessórios, ou documentos. Discreto e de fácil acesso, mantém sua área de trabalho organizada e limpa.`,
     imageSrc: `${cdn.product}/mod_gav.png${cdn.optmise}${cdn.auth}`,
-    imageAlt: 'imagem de uma gaveta modular para o monitor'
+    imageAlt: 'imagem de uma gaveta modular para o monitor',
+    inverted: true
   }
 
   const cellphoneExibition: Exibition = {
     title: 'Módulo de Suporte para Celular',
     description: `Um acessório acoplável ao suporte de monitor, que mantém o celular visível e acessível, ideal para multitarefa. Oferece ajuste de ângulo e, em alguns modelos, carregamento sem fio integrado.`,
     imageSrc: `${cdn.product}/mod_cell.png${cdn.optmise}${cdn.auth}`,
-    imageAlt: 'imagem de um suporte para celular'
+    imageAlt: 'imagem de um suporte para celular',
+    inverted: false
   }
 
   const headSetExibition: Exibition = {
     title: 'Módulo de Suporte para Headset',
     description: `Um suporte acoplável ao suporte de monitor, projetado para armazenar seu headset de forma prática e organizada. Mantém o fone de ouvido ao alcance, economizando espaço na mesa e garantindo que ele esteja sempre protegido e pronto para uso.`,
     imageSrc: `${cdn.product}/mod_headset.png${cdn.optmise}${cdn.auth}`,
-    imageAlt: 'imagem de um suporte para headset'
+    imageAlt: 'imagem de um suporte para headset',
+    inverted: true
   }
 </script>
 

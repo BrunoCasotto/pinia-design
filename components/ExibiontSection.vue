@@ -1,5 +1,5 @@
 <template>
-  <div class="exibition-section">
+  <div class="exibition-section" :class="{ 'exibition-section--inverted': inverted }">
     <div class="exibition-section__col">
       <DisplayTypoGraphy
         class="exibition-section__title"
@@ -38,7 +38,8 @@
     imageSrc?: string
     imageAlt?: string
     title: string
-    description: string
+    description: string,
+    inverted?: boolean
   }
 
   defineProps<Props>()
@@ -70,6 +71,10 @@
         justify-content: center;
         align-items: center;
       }
+    }
+
+    &--inverted {
+      flex-direction: row-reverse;
     }
 
     &__description {
